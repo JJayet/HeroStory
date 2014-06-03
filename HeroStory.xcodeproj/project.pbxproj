@@ -77,6 +77,7 @@
 		F128F4A6193E216A0093B1D7 /* HeroStory */ = {
 			isa = PBXGroup;
 			children = (
+				F1839188193E3D3100B37148 /* Label */,
 				F128F4A9193E216A0093B1D7 /* AppDelegate.swift */,
 				F128F4AE193E216A0093B1D7 /* ViewController.swift */,
 				F128F4B0193E216A0093B1D7 /* Main.storyboard */,
@@ -110,6 +111,13 @@
 				F128F4BE193E216B0093B1D7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1839188193E3D3100B37148 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Label;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +409,7 @@
 				F128F4C5193E216B0093B1D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F128F4C6193E216B0093B1D7 /* Build configuration list for PBXNativeTarget "HeroStoryTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +418,7 @@
 				F128F4C8193E216B0093B1D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

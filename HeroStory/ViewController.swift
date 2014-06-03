@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
+    @IBOutlet var label : UILabel
+    @IBOutlet var button : UIButton
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +23,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func animateLabel(newText : String, characterDelay : NSTimeInterval) {
+        label.text = ""
+        for i in newText
+        {
+            dispatch_async(dispatch_get_main_queue(),
+                {
+                    self.label.text = self.label.text + i
+                })
+            NSThread.sleepForTimeInterval(characterDelay)
+        }
+    }
+    
+    @IBAction func buttonTapped(AnyObject) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
+            {
+                self.animateLabel("Un jeu dont tu es le héros ?", characterDelay:0.1);
+            });
+    }
 }
 
